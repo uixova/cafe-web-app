@@ -1,0 +1,12 @@
+{
+    "2026-02-14": [
+        { "time": "19:00", "title": "Kahve Tadım Atölyesi", "desc": "Yeni nesil demleme tekniklerini uzman baristalarımızla keşfedin.", "location": "Vaveyla Teras" },
+        { "time": "21:00", "title": "Canlı Akustik Gece", "desc": "Hafta sonuna özel akustik performanslar.", "location": "Vaveyla Sahne" }
+    ],
+    "2026-01-24": [
+        { "time": "20:00", "title": "Caz Gecesi", "desc": "Eşsiz bir piyano dinletisi.", "location": "Vaveyla Lounge" }
+    ],
+    "2026-02-05": [
+        { "time": "14:00", "title": "Latte Art Workshop", "desc": "Kendi desenlerinizi oluşturun.", "location": "Vaveyla Atölye" }
+    ]
+}

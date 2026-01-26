@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Group Cafe - Sıcak Anılarınız ile...</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/in-bot.css">
+        <link rel="stylesheet" href="assets/css/auth.css">
+        <link rel="stylesheet" href="assets/css/responsive.css">
+        <link rel="stylesheet" href="assets/css/cart.css">
+        <link rel="stylesheet" href="assets/css/wok.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body>
+
+        <header>
+            <nav class="navbar">
+                <div class="left-navbar">
+                    <div class="navbar-title">
+                        <h1>Vaveyla Kafe</h1>
+                    </div>
+                </div>
+
+                <div class="hamburger-menu" id="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+                <div class="right-navbar" id="nav-links">
+                    <ul>
+                        <li><a href="#home">Anasayfa</a></li>
+                        <li><a href="#menu">Menü</a></li>
+                        <li><a href="#event">Etkinlik Takvimi</a></li>
+                        <li><a href="#contact">İletişim</a></li>
+                        <li>
+                            <button id="auth-btn-nav" class="login-btn"
+                                onclick="openAuthModal()">
+                                <i class="fa-solid fa-user"></i> Giriş Yap
+                            </button>
+                        </li>
+                        <li>
+                            <a href="#mycart" class="cart-btn">
+                                Sepetim <span id="cart-count">0</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <section class="home" id="home">
+            <div class="hero-content">
+                <h4>Hızlı ve Sıcak Teslimat</h4>
+                <h1>Vaveyla Lezzetleri <br> <span>40 Dakikada</span>
+                    Kapında</h1>
+                <p>Taze malzemeler, usta ellerden çıkan benzersiz tarifler ile
+                    tanışın.</p>
+                <div class="hero-btns">
+                    <a href="#menu" class="btn-primary">Menüyü Gör</a>
+                    <a href="#wok" class="btn-secondary">Kendi Kutunu Yap</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu" id="menu">
+            <div class="container">
+                <h2 class="section-title">Vaveyla Lezzet Menüsü</h2>
+
+                <h3 class="category-title">Atıştırmalıklar & Tatlılar</h3>
+                <div id="food-grid" class="menu-grid">
+                </div>
+
+                <h3 class="category-title">İçecekler</h3>
+                <div id="drink-grid" class="menu-grid">
+                </div>
+            </div>
+        </section>
+
+        <div id="product-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+
+                <div class="modal-grid">
+                    <div class="modal-left">
+                        <img id="modal-img" src alt="Ürün">
+                    </div>
+
+                    <div class="modal-right">
+                        <h2 id="modal-title">Ürün Adı</h2>
+                        <p id="modal-description">Ürün açıklaması buraya
+                            gelecek.</p>
+
+                        <div class="options-container">
+                            <div class="option-section">
+                                <h4>İçindekileri Çıkar</h4>
+                                <div id="ingredients-options"
+                                    class="options-list">
+                                </div>
+                            </div>
+
+                            <div class="option-section">
+                                <h4>Ekstra Ekle</h4>
+                                <div id="extras-options" class="options-list">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <div class="modal-price"><span
+                                    id="current-price">0</span> ₺</div>
+                            <button id="confirm-add-btn">Sepete Ekle</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="events" id="event">
+            <div class="container">
+                <h2 class="section-title">Etkinlik Takvimi</h2>
+
+                <div class="events-container">
+                    <div class="calendar-wrapper">
+                        <div class="calendar-header">
+                            <button id="prevMonth"><i
+                                    class="fa-solid fa-chevron-left"></i></button>
+                            <h3 id="monthDisplay">Eylül 2024</h3>
+                            <button id="nextMonth"><i
+                                    class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+                        <div class="calendar-weekdays">
+                            <div>Pz</div><div>Pt</div><div>Sa</div><div>Çar</div><div>Per</div><div>Cu</div><div>Ct</div>
+                        </div>
+                        <div class="calendar-days" id="calendarDays">
+                            <div class="day empty"></div>
+                            <div class="day empty"></div>
+                            <div class="day">1</div>
+                            <div class="day active">2</div> <div
+                                class="day event-day">3</div> </div>
+                    </div>
+
+                    <div class="event-details">
+                        <div class="event-card">
+                            <span class="event-time">19:00</span>
+                            <h4>Kahve Tadım Atölyesi</h4>
+                            <p>Yeni nesil demleme tekniklerini ve farklı
+                                çekirdek profillerini uzman baristalarımız
+                                eşliğinde keşfedin.</p>
+                            <div class="event-footer">
+                                <span class="event-location"><i
+                                        class="fa-solid fa-location-dot"></i>
+                                    Vaveyla Teras</span>
+                                <button class="join-btn">Kayıt Ol</button>
+                            </div>
+                        </div>
+
+                        <div class="event-card secondary">
+                            <span class="event-time">21:00</span>
+                            <h4>Canlı Akustik Gece</h4>
+                            <p>Hafta sonuna özel akustik performanslarla
+                                ruhunuzu dinlendirin.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2 class="section-title">Bize Ulaşın</h2>
+
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <div class="info-box">
+                            <h3>Vaveyla Hakkında</h3>
+                            <p>Sıcak anılarınızı lezzetle buluşturmak için
+                                buradayız. En taze malzemeler ve modern
+                                dokunuşlarla hazırlanan menümüzle, şehrin
+                                gürültüsünden uzak bir sığınak sunuyoruz.</p>
+                        </div>
+
+                        <div class="contact-details">
+                            <div class="detail-item">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <div>
+                                    <h4>Adres</h4>
+                                    <p>Lezzet Caddesi, No: 34,
+                                        Beşiktaş/İstanbul</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fa-solid fa-phone"></i>
+                                <div>
+                                    <h4>Telefon</h4>
+                                    <p>+90 (212) 555 01 23</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fa-solid fa-envelope"></i>
+                                <div>
+                                    <h4>E-posta</h4>
+                                    <p>merhaba@vaveylakafe.com</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="#"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i
+                                    class="fa-brands fa-facebook"></i></a>
+                            <a href="#"><i
+                                    class="fa-brands fa-x-twitter"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <form id="contact-form" class="contact-form">
+                            <div class="input-group">
+                                <input type="text" id="name"
+                                    placeholder="Adınız Soyadınız" required>
+                            </div>
+                            <div class="input-group">
+                                <input type="email" id="email"
+                                    placeholder="E-posta Adresiniz" required>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" id="subject"
+                                    placeholder="Konu">
+                            </div>
+                            <div class="input-group">
+                                <textarea id="message" rows="5"
+                                    placeholder="Mesajınız..."
+                                    required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Mesaj
+                                Gönder</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="cart-sidebar" class="cart-sidebar">
+            <div class="cart-header">
+                <div class="header-left">
+                    <h3>Sepetim (<span id="cart-count-side">0</span>)</h3>
+                    <button id="clear-cart" class="clear-cart-btn"
+                        title="Sepeti Temizle">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </div>
+                <button id="close-cart" class="close-cart">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div id="cart-items" class="cart-items-container">
+                <div class="empty-cart-msg">Sepetiniz şu an boş.</div>
+            </div>
+
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Toplam:</span>
+                    <span id="cart-total-amount">0</span> ₺
+                </div>
+                <button class="checkout-btn"
+                    onclick="handleOrderStep()">Siparişi Tamamla</button>
+            </div>
+        </div>
+
+        <div id="cart-overlay" class="cart-overlay"></div>
+
+        <div id="authModal" class="modal">
+            <div class="modal-content auth-container">
+                <span class="close-modal"
+                    onclick="closeAuthModal()">&times;</span>
+
+                <div class="auth-header">
+                    <h2>VAVEYLA</h2>
+                    <p>Lezzet ve Müzik Dünyasına Giriş Yap</p>
+                </div>
+
+                <div class="auth-tabs">
+                    <button class="auth-tab active"
+                        onclick="switchAuth('login')">Giriş Yap</button>
+                    <button class="auth-tab"
+                        onclick="switchAuth('register')">Kayıt Ol</button>
+                </div>
+
+                <form id="loginForm" class="auth-form">
+                    <div class="input-group">
+                        <input type="email" placeholder="E-posta Adresi"
+                            required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" placeholder="Şifre" required>
+                    </div>
+                    <button type="submit" class="auth-submit">Giriş Yap</button>
+                </form>
+
+                <form id="registerForm" class="auth-form hidden">
+                    <div class="input-group">
+                        <input type="text" placeholder="Ad Soyad" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" placeholder="E-posta Adresi"
+                            required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" placeholder="Şifre" required>
+                    </div>
+                    <button type="submit" class="auth-submit">Hesap
+                        Oluştur</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="orderModal" class="modal">
+            <div class="modal-content auth-container">
+                <span class="close-modal"
+                    onclick="closeOrderModal()">&times;</span>
+                <div class="auth-header">
+                    <h2>SİPARİŞ ÖZETİ</h2>
+                    <p>Lezzet kapına gelmek üzere!</p>
+                </div>
+                <div id="orderSummary"
+                    style="color: #fff; margin-bottom: 20px; text-align: left;">
+                </div>
+                <button class="auth-submit" onclick="confirmOrder()">Siparişi
+                    Onayla</button>
+            </div>
+        </div>
+
+        <div id="toast-container" class="toast-container"></div>
+
+        <footer class="footer">
+            <div class="container footer-grid">
+                <div class="footer-about">
+                    <h2 class="footer-logo">VAVEYLA</h2>
+                    <p>Ruhunuzu dinlendiren melodiler ve damakta iz bırakan
+                        lezzetlerin buluşma noktası.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Hızlı Linkler</h4>
+                    <ul>
+                        <li><a href="#home">Ana Sayfa</a></li>
+                        <li><a href="#menu">Menü</a></li>
+                        <li><a href="#event">Etkinlikler</a></li>
+                        <li><a href="#contact">İletişim</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>İletişim</h4>
+                    <p><i class="fa-solid fa-location-dot"></i> Moda Cad.
+                        No:123, Kadıköy/İstanbul</p>
+                    <p><i class="fa-solid fa-phone"></i> +90 (216) 123 45 67</p>
+                    <p><i class="fa-solid fa-envelope"></i>
+                        merhaba@vaveyla.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Vaveyla Coffee & Event. Tüm Hakları Saklıdır.</p>
+            </div>
+        </footer>
+
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/menu.js"></script>
+        <script src="assets/js/auth.js"></script>
+        <script src="assets/js/event.js"></script>
+        <script src="assets/js/wok.js"></script>
+        <script src="assets/js/cart.js"></script>
+    </body>
+</html>

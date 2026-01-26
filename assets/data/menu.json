@@ -1,0 +1,22 @@
+{
+  "yiyecekler": [
+    { "id": 1, "name": "Elmalı Pay", "displayName": "Dondurmalı Elmalı Pay", "price": 140, "img": "assets/image/Apple-Pie-with-Ice-Cream.png" },
+    { "id": 2, "name": "Babka", "displayName": "Çikolatalı Babka", "price": 125, "img": "assets/image/Chocolate-Babka.png" },
+    { "id": 3, "name": "Kruvasan", "displayName": "Tereyağlı Kruvasan", "price": 85, "img": "assets/image/Croissant.png" },
+    { "id": 4, "name": "Croque Madame", "displayName": "Croque Madame", "price": 165, "img": "assets/image/Croque-Madame.png" },
+    { "id": 5, "name": "Waffle", "displayName": "Meyveli Waffle", "price": 150, "img": "assets/image/Forest-Berry-and-Cream-Waffle.png" },
+    { "id": 6, "name": "Cheesecake", "displayName": "Orman Meyveli Cheesecake", "price": 130, "img": "assets/image/Forest-Fruit-Cheesecake.png" },
+    { "id": 7, "name": "Pasta", "displayName": "Ahududulu Çikolatalı Pasta", "price": 145, "img": "assets/image/Raspberry-Chocolate-Cake.png" },
+    { "id": 8, "name": "Tiramisu", "displayName": "Tiramisu", "price": 120, "img": "assets/image/Tiramisu.png" }
+  ],
+  "icecekler": [
+    { "id": 9, "name": "Cappuccino", "displayName": "Cappuccino", "price": 80, "img": "assets/image/Cappuccino.png" },
+    { "id": 10, "name": "Iced Latte", "displayName": "Iced Latte", "price": 90, "img": "assets/image/Iced-Latte.png" },
+    { "id": 11, "name": "Matcha Latte", "displayName": "Matcha Latte", "price": 100, "img": "assets/image/Matcha-Latte.png" },
+    { "id": 12, "name": "Portakal Suyu", "displayName": "Taze Portakal Suyu", "price": 75, "img": "assets/image/Orange-Juice.png" },
+    { "id": 13, "name": "Iced Tea", "displayName": "Şeftali & Biberiye Iced Tea", "price": 85, "img": "assets/image/Peach-Rosemary-Iced-Tea.png" },
+    { "id": 14, "name": "Purple Latte", "displayName": "Purple Tea Latte", "price": 105, "img": "assets/image/Purple-Tea-Latte.png" },
+    { "id": 15, "name": "Çay", "displayName": "Demleme Çay", "price": 40, "img": "assets/image/Tea.png" },
+    { "id": 16, "name": "Türk Kahvesi", "displayName": "Türk Kahvesi", "price": 70, "img": "assets/image/Turkish-Coffee.png" }
+  ]
+}

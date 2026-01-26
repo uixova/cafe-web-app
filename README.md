@@ -1,29 +1,34 @@
 # Cafe Web App
 
-Bu proje, bir kafe için hazırlanmış modern ve dinamik bir web uygulamasıdır.  
-Sipariş sistemi, ürün yönetimi ve kullanıcı etkileşimleri tamamen frontend tarafında simüle edilmiştir.
+This project is a modern and dynamic web application designed for a cafe.
+The ordering system, product management, and user interactions are fully simulated on the frontend.
 
-## 🚀 Özellikler
-- Ürün ekleme / çıkarma
-- LocalStorage ile sepet yönetimi
-- Dinamik ürün listesi
-- Özel gün ve event sistemi
-- Responsive tasarım
-- Modüler JS yapısı
+## 🚀 Features
+- Add / Remove products
+- Cart management with LocalStorage
+- Dynamic product list
+- Special days and event system
+- Responsive design
+- Modular JavaScript structure
 
-## 🛠 Kullanılan Teknolojiler
+## 🛠 Technologies Used
 - HTML5
 - CSS3
-- JavaScript
+- JavaScript (ES6+)
 - JSON
 - LocalStorage
 
-## 🎯 Amaç
-Bu proje, gerçek bir kafe sistemi mantığını simüle etmek ve frontend tarafında
-büyük ölçekli bir yapıyı yönetebilme becerisini geliştirmek amacıyla yapılmıştır.
+## 🎯 Purpose
+The goal of this project is to simulate the logic of a real cafe system and to 
+improve the ability to manage large-scale structures on the frontend.
 
 ## 🌐 Demo
-GitHub Pages üzerinden yayınlanacaktır.
+Will be published via GitHub Pages.
 
-## 📌 Not
-Bu proje tamamen eğitim ve portföy amaçlıdır.
+## 📌 Note
+This project is created entirely for educational and portfolio purposes.
+
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black)
+![JSON](https://img.shields.io/badge/json-5E5E5E?style=for-the-badge&logo=json&logoColor=white)
