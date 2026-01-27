@@ -107,18 +107,74 @@
 
 @media screen and (max-width: 480px) {
     .navbar-title h1 { font-size: 1.2rem; }
+    .category-title { font-size: 1.3rem; }
+
+    .hero-content h1 { font-size: 2.2rem; }
+    .hero-btns { 
+        flex-direction: column; 
+        gap: 12px;
+    }
+    .btn-primary, .btn-secondary { 
+        width: 100%; 
+        text-align: center; 
+        padding: 15px; 
+    }
 
     .menu-grid {
         grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+    .menu-card { height: auto; } 
+
+    .contact { padding: 40px 5%; }
+    
+    .contact-wrapper {
+        grid-template-columns: 1fr; 
+        padding: 30px 20px;
+        gap: 40px;
     }
 
-    .hero-btns { flex-direction: column; }
-    .btn-primary, .btn-secondary { width: 100%; text-align: center; }
+    .contact-info {
+        text-align: center;
+    }
 
-    .category-title { font-size: 1.3rem; }
+    .contact-info h3 { font-size: 1.6rem; }
     
+    .detail-item {
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .detail-item i {
+        padding: 12px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .contact-form {
+        gap: 15px;
+    }
+
+    .input-group input, 
+    .input-group textarea {
+        font-size: 16px; 
+        padding: 12px;
+    }
+
     .calendar-weekdays { font-size: 0.7rem; }
     .day { font-size: 0.8rem; }
+    
+    .event-footer {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch; 
+    }
+    
+    .join-btn { text-align: center; width: 100%; }
 
     .toast-content h4 { font-size: 14px; }
     .toast-content p { font-size: 12px; }
